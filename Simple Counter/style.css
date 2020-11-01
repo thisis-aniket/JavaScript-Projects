@@ -1,0 +1,26 @@
+.header{
+    text-align: center;
+    font-size: 70px;
+}
+#value{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 70px;
+}
+.button-container{
+    margin-top: 2rem;
+    text-align: center;
+}
+.btn-increase, .btn-decrease, .btn-reset{
+    margin: auto;
+    border: none;
+   color: white;
+   background: black;
+   margin: 0.5rem;
+   border-radius: 0.5rem;
+   size: 1rem;
+   font-size: 20px;
+}
+#jumbotron{
+    border-radius: 1rem;
+}

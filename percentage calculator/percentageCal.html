@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function calcy() {
+            let name = document.getElementById('name').value;
+            let science = document.getElementById('sc').value;
+            let maths = document.getElementById('math').value;
+            let english = document.getElementById('eng').value;
+            let ss = document.getElementById('social').value;
+
+            if ((science >= 0 && science <= 100) && (maths >= 0 && maths <= 100) && (english >= 0 && english <= 100) && (ss >= 0 && ss <= 100)) {
+                let totalGrades = parseFloat(science) + parseFloat(maths) + parseFloat(english) + parseFloat(ss);
+                let percentage = (totalGrades / 400) * 100;
+
+                let grade = "";
+                if (percentage <= 100 && percentage >= 80) {
+                    grade = 'A';
+                }
+                else if (percentage <= 79 && percentage >= 60) {
+                    grade = 'B';
+                }
+                else if (percentage <= 59 && percentage >= 40) {
+                    grade = 'C';
+                }
+                else {
+                    grade = 'F';
+                }
+
+                if (grade == 'F') {
+                    document.getElementById('showdata').innerHTML = `${name} Your Total Marks is ${totalGrades} and percentage are ${percentage}% <br> Your garde is ${grade}.<br> You are Fail, Try again next time`;
+                }
+                else {
+                    document.getElementById('showdata').innerHTML = `${name} Your Total Marks is ${totalGrades} and percentage are ${percentage}% <br> Your garde is ${grade},<br> Congratulations, You are pass. `;
+                }
+            }
+            else {
+                alert("Please, Enter Valid Marks...");
+            }
+        }
+    </script>
+
+
+    <title>percentage Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="head">Percentage Calculator</h3>
+        <div class="marksCal">
+            <input type="text" id="name" placeholder="Enter Your Name" required><br>
+            <input type="number" id='sc' placeholder="Science" min="0" max="100" required><br>
+            <input type="number" id='math' placeholder="Mathmatics" min="0" max="100" required><br>
+            <input type="number" id='eng' placeholder="English" min="0" max="100" required><br>
+            <input type="number" id='social' placeholder="Social Science" min="0" max="100" required><br>
+            <button class="btn" onclick="calcy()">Calculate</button>
+        </div>
+        <div class="show">
+            <p id="showdata">
+            </p>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

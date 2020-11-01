@@ -1,0 +1,68 @@
+HTML,
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(114, 221, 114) ;
+}
+.container {
+    background: rgb(6, 26, 1);
+    position: absolute;
+    height: 530px;
+    width: 325px;
+    margin: auto;
+    top: 10%;
+    left: 40%;
+    padding: 20px;
+    color: whitesmoke;
+    border-radius: 30px;
+}
+.marksCal{
+    position: relative;
+    left: 1px;
+    top: 20px;
+    padding: 10px;
+}
+.head{
+    position: relative;
+    left: 28px;
+    font-size: x-large;
+}
+.marksCal [type="number"], .marksCal [type="text"]{
+    margin-bottom: 7px;
+    outline: none;
+    background: transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 7px;
+    font-weight: bold;
+    font-size: larger;
+    width: 100%;
+}
+.btn{
+    margin-top: 7px;
+    position: relative;
+    left: 95px;
+    background:yellow;
+    color: black;
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.btn:hover{
+    background: lightblue;
+    color: black;
+}
+.show{
+    margin-top: 40px;
+    font-size: small;
+    font-weight: 300;
+}
+.show p{
+    width:100%;
+    margin: auto;
+    text-align: center;
+    font-weight: 300;
+}
